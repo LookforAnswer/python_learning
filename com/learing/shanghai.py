@@ -9,7 +9,7 @@ def get_one_page(url):
     return response.read().decode('utf-8')
 
 
-def parse_one_page(html, re_str, base_path):
+def parse_one_page(html, base_path):
     html = etree.HTML(html)
     items = html.xpath('//div[@class="sse_common_wrap_cn"]')
     count = 0
